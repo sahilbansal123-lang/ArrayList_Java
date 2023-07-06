@@ -1,5 +1,6 @@
 package ArrayList;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ArrayLists {
 
@@ -54,9 +55,19 @@ public class ArrayLists {
         System.out.println("Min element is: " + min);
 
         System.out.println(list);
+
         // Swaping two elements in array list
         swap(list, 2, 5);
         System.out.println(list);
+
+        // Sorting
+        System.out.println("Sorting in Ascending order");
+        Collections.sort(list);
+        System.out.println(list);
+        System.out.println("Sorting in Descending order");
+        Collections.sort(list, Collections.reverseOrder());
+        System.out.println(list);
+
 
     }
 }
