@@ -31,12 +31,18 @@ public class ArrayLists {
         int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) > max){
-                max = list.get(i);
-                System.out.println("max element is: " + max);
-            }
-
+//            if (list.get(i) > max){
+//                max = list.get(i);
+//            }
+//            if (list.get(i) < min){
+//                min = list.get(i);
+//            }
+            max = Math.max(list.get(i), max);
+            min = Math.min(list.get(i), min);
         }
+        System.out.println("max element is: " + max);
+        System.out.println("Min element is: " + min);
+
 
         // Swaping two elements in array list
 
