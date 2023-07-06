@@ -17,21 +17,23 @@ public class ContainerWithMostWtaer {
 
     }
 
-    // Two Pointer Approach
+    // Two Pointer Approach O(N)
     public static int calcWater(ArrayList<Integer> height){
         int lP = 0;
         int rP = height.size() - 1;
         int maxWater = 0;
         while (lP < rP) {
-            if (lP < rP) {
-                lP++;
-            } else {
-                rP--;
-            }
+
             int minHeight = Math.min(height.get(lP), height.get(rP));
             int width = rP - lP;
             int water = minHeight * width;
             maxWater = Math.max(water, maxWater);
+
+            if (height.get(lP) < height.get(rP)) {
+                lP++;
+            } else {
+                rP--;
+            }
         }
         return maxWater;
     }
