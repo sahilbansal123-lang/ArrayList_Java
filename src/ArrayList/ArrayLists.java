@@ -3,6 +3,13 @@ import java.util.ArrayList;
 
 public class ArrayLists {
 
+    public static void swap(ArrayList<Integer> list1, int idx1, int idx2){
+        int temp = list1.get(idx1);
+        list1.set(idx1, list1.get(idx2));
+        list1.set(idx2, temp);
+    }
+
+
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>();
@@ -25,15 +32,18 @@ public class ArrayLists {
         }
         System.out.println();
         list.add(6);
+        list.add(7);
 
         // find Min and Max int array list
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < list.size(); i++) {
+
 //            if (list.get(i) > max){
 //                max = list.get(i);
 //            }
+
 //            if (list.get(i) < min){
 //                min = list.get(i);
 //            }
@@ -43,9 +53,10 @@ public class ArrayLists {
         System.out.println("max element is: " + max);
         System.out.println("Min element is: " + min);
 
-
+        System.out.println(list);
         // Swaping two elements in array list
-
+        swap(list, 2, 5);
+        System.out.println(list);
 
     }
 }
